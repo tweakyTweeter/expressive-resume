@@ -26,6 +26,9 @@
 \RequirePackage{graphicx}
 \RequirePackage{tikz}
 
+% Add support for advanced table section formatting
+\RequirePackage{tabularx}
+
 %% Add advanced table formatting support
 % From https://gist.github.com/LanternD/1edd0fcc64f287d841b6da3ec38c69a2
 \RequirePackage{array}
@@ -102,9 +105,21 @@
 }
 
 %% ----- Custom Commands -----
+
+% Two column section
+\newcommand{\sectiontwocol}[2]{%
+    \vspace{\spacenormal}
+    \noindent
+    \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.106\textwidth} >{\raggedright\arraybackslash}X@{}}
+        {\normalsize\bfseries #1} & #2
+    \end{tabularx}
+    \vspace{\spacesmall}
+}
+
+
 % Contact Information
 \newcommand{\nametitle}[2]{%
-    { \Huge #1 \textsc{#2} }\\
+    { \Large #1 \textsc{#2} }\\
 }
 \newcommand{\contactseparator}{
     \hspace{\spacesmall}\textbar\hspace{\spacesmall}
@@ -118,7 +133,7 @@
 % Experience/Achievements
 \newcommand{\equivalent}{\textnormal{\textsc{equivalent}}}
 \newcommand{\honors}[1]{\textnormal{\emph{#1}}}
-\newcommand{\roletitle}[1]{\textbf{#1}}
+\newcommand{\roletitle}[1]{\textbf{\textit{#1}}}
 \newcommand{\tech}[1]{{\color{Brown}\textbf{#1}}}
 \newcommand{\tenure}[1]{\textbf{#1}}
 \newcommand{\achievement}[1]{%
@@ -127,10 +142,17 @@
     \end{itemize}
     \vspace{\spacesmall}
 }
-\newcommand{\degree}[4]{%
-    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
-    #4
+%\newcommand{\degree}[4]{%
+%    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
+%    #4
+%}
+\newcommand{\degree}[4]{
+  \noindent\textbf{#1} \hfill \textbf{#4} \\
+  #2 \\
+  #3
+  \par\vspace{0.8em}
 }
+
 \newcommand{\award}[4]{%
     \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
     #4
@@ -145,7 +167,7 @@
     #3
 }
 \newcommand{\experience}[2]{%
-    \noindent\textsc{#1}\dotfill
+    \noindent{\fontsize{14pt}{14pt}\selectfont\textbf{#1}}\dotfill
 
     \vspace{\spacesmall}
 
@@ -159,3 +181,6 @@
 \setlength{\textwidth}{6.5in}
 \setlength{\textheight}{9in}
 \pagenumbering{arabic}
+
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}

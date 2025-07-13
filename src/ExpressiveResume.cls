@@ -13,6 +13,8 @@
 %% Define page layout
 \RequirePackage[margin=0.5in]{geometry}
     \pagestyle{empty}
+%% Add support for custom section headers
+\RequirePackage{titlesec}
 
 %% ----- Custom Commands -----
 % Header Block
@@ -26,7 +28,7 @@
     state,
     qrcode  % Path to an image of a 1000x1000px QR Code
 ]{
-    \begin{flushleft}
+    \begin{center}
         \nametitle{\commandkey{firstname}}{\ifcommandkey{middleinitial}{\commandkey{middleinitial}. }{}\commandkey{lastname}}
         \vspace{7pt}
         {%
@@ -56,15 +58,19 @@
             {}%
             \ifcommandkey{linkedin}%
             {%
-                \linkedin{\commandkey{linkedin}}%
-                \ifcommandkey{state}{\contactseparator}{}%
+                \linkedin{\commandkey{linkedin}}
             }%
-            {}%
-            \ifcommandkey{state}%
-            {\location{\ifcommandkey{city}{\commandkey{city}, }{}\commandkey{state}}}%
-            {}%
+            {}
+            \ifcommandkey{state}{%
+                \begin{center}
+                    {\location{\ifcommandkey{city}{\commandkey{city}, }{}\commandkey{state}}}%
+                    {}
+                    %{\color{blue}\rule{\textwidth}{0.4pt}}
+                \end{center}
+                % Add titlerule after header
+            }{}
         }
-    \end{flushleft}
+    \end{center}
 
     \ifcommandkey{qrcode}{%
         % QR Code - Generated with https://www.logodesign.net/qrcode-generator
@@ -76,9 +82,12 @@
         \vspace{-16pt}
     }{}
 }
+
+
 \newcommand{\tagline}[2]{%
     \begin{flushleft}
-        \textsc{#1}: #2
+        %\textsc{#1}: #2
+        \textsc #2
     \end{flushleft}
 }
 \newcommand{\summary}[1]{\tagline{Summary}{#1}}

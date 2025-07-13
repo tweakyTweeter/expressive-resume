@@ -3,71 +3,142 @@
 % ----- Resume -----
 \begin{document}
 
+
+
 % ----- Name + Contact Information -----
 \resumeheader[
-    firstname=John,
-    middleinitial=N,
-    lastname=Doe,
-    email=john.doe@example.com,
-    % phone=123-456-7890,
-    linkedin=johndoe,
-    github=johndoe,
-    % city=Town,
-    % state=State,
-    qrcode=./images/qr.png
+    firstname=ANSHUMAN,
+    middleinitial=A,
+    lastname=KUMAR,
+    email=anshuman27kumar@gmail.com,
+    phone=716-867-8146,
+    linkedin=anshuman27kumar,
+    city=Cambridge,
+    state=Massachusetts
 ]
 
-\objective{A software engineering graduate with 2 years of work
-    experience at various internships seeking opportunities to develop
-    web/mobile applications for Company XYZ.}
+
+
+% ----- Summary -----
+\summary{A highly motivated software engineer with a passion for
+    developing innovative solutions. Proficient in modern web and
+    mobile technologies, with a strong foundation in software engineering
+    principles.}
+
+
 
 % ----- Work Experience -----
 \section{Work Experience}
+%\sectiontwocol{Work Experience}{
+    \experience{Akamai Technologies}{%
 
-\experience{Radiant Software Systems}{%
-    \role{Software Engineer}{2021 - 2024}{
-        \achievement{
 
-            Developed a mobile app in \tech{React Native} that was
-            downloaded 100k times on Google Play.
-
+        \role{Principal Data Scientist}{2024-Present}{
+            \achievement{
+                Owning cross-organizational Data Science and ML initiatives for product recommendations, customer behavior modeling, customer lifetime value, and marketing data analytics.
+            }
+            \achievement{
+                Spearheading the development of machine learning models to enhance threat detection and response capabilities
+            }
+            \achievement{
+                Collaborating with cross-functional teams to integrate data science solutions into Akamai's product offerings
+            }
         }
-    }
-    \role{Summer Intern}{2021}{
-        \achievement{
 
-            Collaborated in an \tech{Agile/Scrum} team of 8 engineers to
-            deliver new features every 2 weeks.
-
+        \role{Lead Data Scientist}{2022-2024}{
+            \achievement{
+                Measuring conversion rates of marketing generated leads to opportunities in a sales pipeline, and
+                developing predictive models to compute win-propensity of opportunities and forecast deal sizes
+            }
+            \achievement{
+                Enhanced Akamai’s new customer acquisition strategy and prospecting efforts by building propensity-to-
+                buy models using a stacked ensemble of random forest and gradient boosted machines in H2O.ai
+            }
+            \achievement{
+                Led development of a white space analysis incorporating propensity-to-buy, intent-to-buy, and purchase
+                wallet size to improve cross-sell and upsell initiatives by Marketers \& Account Executives
+            }
+            \achievement{
+                Periodically monitored model performance and covariate shift as a part of the model lifecycle management
+            }
+            \achievement{
+                Developed a scoring pipeline using a workflow management system in R that publishes output of
+                predictive models to production grade databases and company-wide BI tools
+            }
         }
+        
+        \role{Senior Data Scientist}{2017-2022}{
+            \achievement{
+                Built a novel anomaly detection algorithm using isolation forest and ESD test to pro-actively monitor KPIs
+                for detecting high-level customer incidents caused by software rollouts
+            }
+            \achievement{
+                Diagnosed factors that affect video delivery over the internet (OTT) by observing patterns between
+            }
+            \achievement{
+                Akamai’s network metrics using inferential statistics
+            }
+            \achievement{
+                Assembled large volumes of unstructured data in Spark to prototype an anomaly detection framework
+            }
+            \achievement{
+                Collaborated with a team of data scientists to construct a correlation engine based on graph theory to
+                identify root-causes of performance degradation within a network of servers
+            }
+        }
+        
+        \role{Data Scientist}{2015-2017}{
+            \achievement{
+                Applied a Bayesian model to dynamically update sales-quota targets as a part of Akamai’s operating plan
+            }
+            \achievement{
+                Constructed a hierarchical mixed-effects Bayesian model to measure customer loyalty and NPS score
+            }
+            \achievement{
+                Automated reports derived from disparate datasets that measure adoption rates for internal website portal
+            }
+            \achievement{
+                Designed a graph database application to optimize storage mechanism of hierarchal firmographic data
+            }
+            \achievement{
+                Performed data forensics and detected gaps in invoicing systems, product configurations, and contractual
+                structures that led to the recovery of unaccounted revenue close to \$500K
+            }
+        }    
     }
-}
+%}
 
-% ----- Technical Projects -----
-\section{Technical Projects}
-
-\project{Expressive Resume}{2021 - 2024}{
-    \achievement{
-
-        Created a \tech{\LaTeX} class that enables anyone to
-        quickly create a beautiful resume and cover letter.
-
-    }
-
-}
 
 % ----- Education -----
 \section{Education}
+%\sectiontwocol{Education}{
+    \degree
+        {University at Buffalo, The State University of New York}  % school name
+        {Master of Science, Industrial Engineering (with specialization in Operations Research)}  % degree
+        {Alpha Pi Mu, Industrial Engineering Honor Society, Omega Rho Honors Society \hfill GPA: 3.95/4.00}  % honors + GPA
+        {Sep 2015} 
+%}
 
-\degree{B.S. Software Engineering \honors{Summa Cum Laude}}{Super Duper University}{2022}{
-    \achievement{Ranked \#15 out of 463 students}
-}
 
-% ----- Awards -----
-\section{Awards}
 
-\award{Employee of the Month}{Radiant Software Systems}{2023}{
-    \achievement{Did some amazing stuff that really benefitted the company}
-}
+% ----- Publications -----
+\section{Publications}
+%\sectiontwocol{Publications}{
+    \achievement{A. Kumar et al. “Inferring origin-destination pairs and utility-based travel preferences of shared mobility
+system users in a multi-modal environment,” Transportation Research Part B, 2016, 91(C):270-291}
+
+    \achievement{A. Kumar et al. “Life Cycle Cost Analysis of Ready Mix Concrete Plant,” Journal of The Institution of Engineers Series A, 2014, 94(2):229-233}
+%}
+
+
+
+% ----- Skills -----
+\section{Skills}
+\begin{itemize}
+    \item \textbf{Languages:} Python, R, SQL, JavaScript, TypeScript
+    \item \textbf{Tools:} Docker, Kubernetes, Git, Jenkins
+    \item \textbf{Databases:} MySQL, PostgreSQL, MongoDB
+    \item \textbf{Cloud Platforms:} AWS, Azure   
+\end{itemize}
 
 \end{document}
