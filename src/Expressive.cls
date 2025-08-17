@@ -117,7 +117,7 @@
 }
 
 
-% Contact Information
+% Commands for Contact Information
 \newcommand{\nametitle}[2]{%
     { \Large #1 \textsc{#2} }\\
 }
@@ -130,42 +130,7 @@
 \newcommand{\linkedin}[1]{\faIcon{linkedin} \href{https://linkedin.com/in/#1/}{linkedin.com/in/#1}}
 \newcommand{\location}[1]{\faIcon{map-marker-alt} #1}
 
-% Experience/Achievements
-\newcommand{\equivalent}{\textnormal{\textsc{equivalent}}}
-\newcommand{\honors}[1]{\textnormal{\emph{#1}}}
-\newcommand{\roletitle}[1]{\textbf{\textit{#1}}}
-\newcommand{\tech}[1]{{\color{Brown}\textbf{#1}}}
-\newcommand{\tenure}[1]{\textbf{#1}}
-\newcommand{\achievement}[1]{%
-    \begin{itemize}
-        \item #1
-    \end{itemize}
-    \vspace{\spacesmall}
-}
-%\newcommand{\degree}[4]{%
-%    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
-%    #4
-%}
-\newcommand{\degree}[4]{
-  \noindent\textbf{#1} \hfill \textbf{#4} \\
-  #2 \\
-  #3
-  \par\vspace{0.8em}
-}
-
-\newcommand{\award}[4]{%
-    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
-    #4
-}
-\newcommand{\project}[3]{%
-    \noindent\textbf{#1} \hfill \tenure{#2} \vspace{\spacesmall}\par
-    #3
-    \vspace{\spacesmall}
-}
-\newcommand{\role}[3]{%
-    \noindent\roletitle{#1} \hfill \tenure{#2}\vspace{\spacesmall}\par
-    #3
-}
+% Command for Experience
 \newcommand{\experience}[2]{%
     \noindent{\fontsize{14pt}{14pt}\selectfont\textbf{#1}}\dotfill
 
@@ -175,6 +140,56 @@
 
     \vspace{\spacesmall}
 }
+
+% Command for Role Information
+\newcommand{\role}[3]{%
+    \noindent\roletitle{#1} \hfill \tenure{#2}\vspace{\spacesmall}\par
+    #3
+}
+\newcommand{\roletitle}[1]{{\fontsize{12pt}{1pt}\selectfont\textbf{\textit{#1}}}}
+
+% Command for achievements
+\newcommand{\achievement}[1]{%
+    \begin{itemize}
+        \item {\fontsize{10}{1}\selectfont #1}
+    \end{itemize}
+    \vspace{\spacesmall}
+}
+
+% Command for project and nested project items
+\newcommand{\project}[3]{%
+  \begin{itemize}[leftmargin=22pt, label={}, itemsep=0pt, topsep=2pt]
+    \item \textbf{#1} \hfill \tenure{#2}
+    \item[] #3
+  \end{itemize}
+  \vspace{\spacesmall}
+}
+\newcommand{\projectitem}[1]{%
+  \begin{itemize}[leftmargin=9pt, label=\textbullet, itemsep=2pt, topsep=0pt]
+    \item {\fontsize{10}{1}\selectfont #1}
+  \end{itemize}
+  \vspace{\spacesmall}
+}
+
+% Command for degree
+\newcommand{\degree}[4]{
+  \noindent\textbf{#1} \hfill \textbf{#4} \\
+  #2 \\
+  #3
+  \par\vspace{0.8em}
+}
+
+% Command for awards
+\newcommand{\award}[4]{%
+    \noindent\textbf{#1}, #2 \hfill \tenure{#3} \vspace{\spacesmall}\par
+    #4
+}
+
+% Miscellaneous Commands 
+\newcommand{\equivalent}{\textnormal{\textsc{equivalent}}}
+\newcommand{\honors}[1]{\textnormal{\emph{#1}}}
+\newcommand{\tech}[1]{{\color{Brown}\textbf{#1}}}
+\newcommand{\tenure}[1]{{\fontsize{12pt}{1pt}\selectfont\textbf{#1}}}
 
 %% ----- Four Required Configurations -----
 \renewcommand{\normalsize}{\fontsize{12pt}{12pt}\selectfont}

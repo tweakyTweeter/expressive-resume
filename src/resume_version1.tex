@@ -20,50 +20,105 @@
 
 
 % ----- Summary -----
-\summary{A highly motivated software engineer with a passion for
-    developing innovative solutions. Proficient in modern web and
-    mobile technologies, with a strong foundation in software engineering
-    principles.}
-
+\summary{
+    {\fontsize{10}{13}\selectfont
+        Data Science professional with 10 years of experience in machine learning, big data technologies, mathematical
+        modeling, and business analytics to drive product innovation, revenue growth, and cost reduction
+}}
 
 
 % ----- Work Experience -----
 \section{Work Experience}
 %\sectiontwocol{Work Experience}{
-    \experience{Akamai Technologies}{%
+    \experience{Akamai Technologies}{
 
 
         \role{Principal Data Scientist}{2024-Present}{
-            \achievement{
-                Owning cross-organizational Data Science and ML initiatives for product recommendations, customer behavior modeling, customer lifetime value, and marketing data analytics.
+            \achievement{Owning ML and AI initiatives for product recommendations, customer behavior modeling, and marketing data science, to drive Akamai's Go-To-Market strategy, with a focus on cross-functional alignment}
+            \achievement{Overseeing development of ML solutions end-to-end, from data ingestion to production deployment, while overseeing on-prem infrastructure, ML tooling, CI/CD workflows, and release management}
+            \achievement{Leading a globally distributed team of 4 data scientists, providing technical guidance, managing team's project delivery \& stakeholder alignment, and supporting the team's technical mentorship \& career development}
+
+            \vspace{3pt}
+
+             \project{Key Project: Agentic workflows for Customer Journey Optimization \& Insights Narration}{}{
+                \vspace{3pt}     
+                \projectitem{
+                    Conceptualizing and prototyping a multi-agent AI system, integrating generative models, reinforcement learning, and traditional ML to automate lead generation, 
+                    contact enrichment, and personalized marketing creative generation
+                }
+                \projectitem{
+                    Developing an AI-powered Insights Narrator, that translates complex SQL, BI reports, and business KPIs into real-time natural language insights for stakeholders, 
+                    in an effort to reduce time-to-insight and minimize manual analytics
+                }
+                \projectitem{
+                    Builing topic-level intent segments by summarizing content engagement across customer interactions with LLMs and generating embeddings for clustering 
+                    and sentiment analysis, for refining product messaging 
+                }
             }
-            \achievement{
-                Spearheading the development of machine learning models to enhance threat detection and response capabilities
+
+            \project{Key Project: ML and Behavioral Modeling to drive Product-Led Growth for Akamai’s Cloud Business}{}{
+                \vspace{3pt}
+                \projectitem{
+                    Mentored a data scientist in building a predictive lead scoring system using LightGBM based on 7-day usage behavior; with model achieving 78\% recall
+                    in flagging high-MRR accounts (\$500+) for Sales routing
+                }
+                \projectitem{
+                    Led development of an unsupervised segmentation model, incorporating product usage, firmographics, and RFM features; 
+                    identified 9 actionable customer segments for targeted marketing and in-app notifications
+                }
+                \projectitem{
+                    Clustered top-performing segments by usage sequence patterns and applied Heuristic Miner process mining algorithm to uncover adoption flows; 
+                    insights are shaping gamification strategies for product engagement
+                }
+                \projectitem{
+                    Mentored a junior data scientist in designing a causal inference framework (case-control analysis) using observational data to assess campaign effectiveness
+                    and deliver post-hoc ROI insights in the absense of A/B testing}
+                % https://medium.com/data-science/efficient-sampling-frameworks-in-causal-inference-data-science-52ad44e15f48 https://medium.com/data-science/causal-inference-in-data-science-valid-inferential-coverage-with-multiple-comparisons-750e9e3f0259
+                \projectitem{Led development of a Nested Multinomial Logit Discrete Choice Model in collaboration with two data scientists, using panel data to support product bundling strategy decisions}
+                % https://pdfs.semanticscholar.org/09af/745373fca33a8aad1343b00c480bf27e3d97.pdf https://www.pymc.io/projects/examples/en/latest/generalized_linear_models/multilevel_modeling.html
             }
-            \achievement{
-                Collaborating with cross-functional teams to integrate data science solutions into Akamai's product offerings
-            }
+
+            \vspace{5pt}
         }
 
         \role{Lead Data Scientist}{2022-2024}{
-            \achievement{
-                Measuring conversion rates of marketing generated leads to opportunities in a sales pipeline, and
-                developing predictive models to compute win-propensity of opportunities and forecast deal sizes
+            \project{Key Project: New Customer Fit Modeling and B2B Product Recommendation Models}{}{
+            \vspace{3pt}    
+            \projectitem{
+                    Enhanced Akamai’s new customer acquisition strategy and prospecting efforts by building propensity-to-
+                    buy models using a stacked ensemble of random forest and gradient boosted machines in H2O.ai
+                }
+                \projectitem{
+                    Led development of a white space analysis incorporating propensity-to-buy, intent-to-buy, and purchase
+                    wallet size to improve cross-sell and upsell initiatives by Marketers \& Account Executives
+                }
             }
-            \achievement{
-                Enhanced Akamai’s new customer acquisition strategy and prospecting efforts by building propensity-to-
-                buy models using a stacked ensemble of random forest and gradient boosted machines in H2O.ai
-            }
-            \achievement{
-                Led development of a white space analysis incorporating propensity-to-buy, intent-to-buy, and purchase
-                wallet size to improve cross-sell and upsell initiatives by Marketers \& Account Executives
-            }
-            \achievement{
-                Periodically monitored model performance and covariate shift as a part of the model lifecycle management
-            }
-            \achievement{
-                Developed a scoring pipeline using a workflow management system in R that publishes output of
-                predictive models to production grade databases and company-wide BI tools
+            \project{Key Project: Journey-based Marketing Mix Modeling (MMM) for Channel optimization}{}{
+                % https://arxiv.org/pdf/2505.12617, https://docs.doubleml.org/stable/examples/py_double_ml_plm_irm_hetfx.html, https://developers.google.com/meridian/docs/basics/causal-graph
+                \vspace{3pt}
+                \projectitem{
+                    Implemented a novel MMM framework using Double Machine Learning (DML) to estimate causal-effects of different marketing channels 
+                    (concurrent multi-valued treatments), within B2B journey stages
+                }
+                \projectitem{Applied Principal Component Analysis (PCA) to handle cross-channel correlations, to generate uncorrelated shared marketing factors for causal estimation using DML}
+                \projectitem{
+                    Utilized DML's partial linear model, a multi-output random forest regression model, 
+                    and an inverse PCA transform to estimate the causal effects of marketing channels with cross-channel interactions
+                }
+                \projectitem{
+                    Implemented modular, production-grade ETL pipelines using Hamilton to orchestrate feature transformations for MMM,
+                    enabling clear dependency tracking, reproducibility, and scalable DAG-based execution
+                }
+                \projectitem{Spearheaded cross-team data acquisition across Organic/Paid/Offline media channels for MMM modeling}
+                \projectitem{Standardized marketing taxonomy and spend reconciliation with Finance teams for MMM modeling}
+                \projectitem{
+                    Collaborated with BI team to build a journey-based analytics dashboard, leveraging MMM datassets, to provide marketers insights 
+                    about touchpoint effectiveness across the lead-to-deal funnel
+                }
+                \projectitem{
+                    Guided a junior data scientist in applying sequence clustering and process mining techniques to discover common marketing journey patterns, 
+                    helping Marketing design recipes for personalization
+                }
             }
         }
         
@@ -73,10 +128,7 @@
                 for detecting high-level customer incidents caused by software rollouts
             }
             \achievement{
-                Diagnosed factors that affect video delivery over the internet (OTT) by observing patterns between
-            }
-            \achievement{
-                Akamai’s network metrics using inferential statistics
+                Diagnosed factors that affect video delivery over the internet (OTT) by observing patterns between Akamai’s network metrics using inferential statistics
             }
             \achievement{
                 Assembled large volumes of unstructured data in Spark to prototype an anomaly detection framework
@@ -104,7 +156,8 @@
                 Performed data forensics and detected gaps in invoicing systems, product configurations, and contractual
                 structures that led to the recovery of unaccounted revenue close to \$500K
             }
-        }    
+            % Write about Wallet Potential Model here along with points from code refactoriing
+        }
     }
 %}
 
@@ -114,9 +167,9 @@
 %\sectiontwocol{Education}{
     \degree
         {University at Buffalo, The State University of New York}  % school name
-        {Master of Science, Industrial Engineering (with specialization in Operations Research)}  % degree
-        {Alpha Pi Mu, Industrial Engineering Honor Society, Omega Rho Honors Society \hfill GPA: 3.95/4.00}  % honors + GPA
-        {Sep 2015} 
+        {\fontsize{10}{13}\selectfont Master of Science, Industrial Engineering (with specialization in Operations Research)}  % degree
+        {\fontsize{10}{13}\selectfont Alpha Pi Mu, Industrial Engineering Honor Society, Omega Rho Honors Society \hfill GPA: 3.95/4.00}  % honors + GPA
+        {2015} 
 %}
 
 
