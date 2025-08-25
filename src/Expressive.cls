@@ -160,6 +160,7 @@
 \newcommand{\project}[3]{%
   \begin{itemize}[leftmargin=22pt, label={}, itemsep=0pt, topsep=2pt]
     \item \textbf{#1} \hfill \tenure{#2}
+    %\item \fontsize{11.5}{1}\selectfont \textbf{#1} \hfill \tenure{#2}
     \item[] #3
   \end{itemize}
   \vspace{\spacesmall}

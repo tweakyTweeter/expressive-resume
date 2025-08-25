@@ -20,11 +20,15 @@
 
 
 % ----- Summary -----
+\setlength{\parindent}{0pt}
 \summary{
     {\fontsize{10}{13}\selectfont
-        Data Science professional with 10 years of experience in machine learning, big data technologies, mathematical
-        modeling, and business analytics to drive product innovation, revenue growth, and cost reduction
-}}
+        %Machine Learning professional with 10+ years experience in deep learning, causal inference, and statistical modeling, 
+        Experienced Machine Learning professional with a background in deep learning and statistical modeling,
+        exploring opportunities \newline in foundation model building, post-training, and designing agent-based systems. 
+        I’m motivated by the potential to apply my skills \newline to real-world problems that enhance human decision-making and empower individuals through AI.
+    }
+}
 
 
 % ----- Work Experience -----
@@ -63,18 +67,22 @@
                     in flagging high-MRR accounts (\$500+) for Sales routing
                 }
                 \projectitem{
-                    Led development of an unsupervised segmentation model, incorporating product usage, firmographics, and RFM features; 
-                    identified 9 actionable customer segments for targeted marketing and in-app notifications
+                    Led development of an unsupervised K-Medoids segmentation model incorporating product usage, firmographics, and RFM features;    
+                    identified 9 actionable customer segments to drive personalized outreach and in-product engagement
                 }
+                % https://medium.com/@prasanNH/exploring-the-world-of-clustering-k-means-vs-k-medoids-f648ea738508
+                % https://rajithkalinda.medium.com/understanding-gower-distance-for-mixed-data-types-in-machine-learning-e90ad42d5684
+                % https://towardsdatascience.com/gowers-distance-for-mixed-categorical-and-numerical-data-799fedd1080c/
                 \projectitem{
                     Clustered top-performing segments by usage sequence patterns and applied Heuristic Miner process mining algorithm to uncover adoption flows; 
                     insights are shaping gamification strategies for product engagement
                 }
                 \projectitem{
                     Mentored a junior data scientist in designing a causal inference framework (case-control analysis) using observational data to assess campaign effectiveness
-                    and deliver post-hoc ROI insights in the absense of A/B testing}
+                    and deliver post-hoc ROI insights in the absense of A/B testing
+                }
                 % https://medium.com/data-science/efficient-sampling-frameworks-in-causal-inference-data-science-52ad44e15f48 https://medium.com/data-science/causal-inference-in-data-science-valid-inferential-coverage-with-multiple-comparisons-750e9e3f0259
-                \projectitem{Led development of a Nested Multinomial Logit Discrete Choice Model in collaboration with two data scientists, using panel data to support product bundling strategy decisions}
+                \projectitem{Led development of a Nested Multinomial Logit Discrete Choice Model in collaboration with two data scientists, using panel data to support product bundling strategies}
                 % https://pdfs.semanticscholar.org/09af/745373fca33a8aad1343b00c480bf27e3d97.pdf https://www.pymc.io/projects/examples/en/latest/generalized_linear_models/multilevel_modeling.html
             }
 
@@ -84,84 +92,129 @@
         \role{Lead Data Scientist}{2022-2024}{
             \project{Key Project: New Customer Fit Modeling and B2B Product Recommendation Models}{}{
             \vspace{3pt}    
-            \projectitem{
-                    Enhanced Akamai’s new customer acquisition strategy and prospecting efforts by building propensity-to-
-                    buy models using a stacked ensemble of random forest and gradient boosted machines in H2O.ai
+                \projectitem{
+                    Developed product recommendation models using a Positive-Unlabeled (PU) Learning framework trained on labeled product purchases and unlabeled prospects, 
+                    achieving 74\% average recall in identifying high-fit customers
                 }
                 \projectitem{
-                    Led development of a white space analysis incorporating propensity-to-buy, intent-to-buy, and purchase
-                    wallet size to improve cross-sell and upsell initiatives by Marketers \& Account Executives
-                }
-            }
-            \project{Key Project: Journey-based Marketing Mix Modeling (MMM) for Channel optimization}{}{
-                % https://arxiv.org/pdf/2505.12617, https://docs.doubleml.org/stable/examples/py_double_ml_plm_irm_hetfx.html, https://developers.google.com/meridian/docs/basics/causal-graph
-                \vspace{3pt}
-                \projectitem{
-                    Implemented a novel MMM framework using Double Machine Learning (DML) to estimate causal-effects of different marketing channels 
-                    (concurrent multi-valued treatments), within B2B journey stages
-                }
-                \projectitem{Applied Principal Component Analysis (PCA) to handle cross-channel correlations, to generate uncorrelated shared marketing factors for causal estimation using DML}
-                \projectitem{
-                    Utilized DML's partial linear model, a multi-output random forest regression model, 
-                    and an inverse PCA transform to estimate the causal effects of marketing channels with cross-channel interactions
+                    Designed a dual-encoder neural network in PyTorch for mixed-type tabular data, integrating categorical embeddings and numerical features, 
+                    trained using a custom PU contrastive loss to learn discriminative representations for downstream classification
                 }
                 \projectitem{
-                    Implemented modular, production-grade ETL pipelines using Hamilton to orchestrate feature transformations for MMM,
-                    enabling clear dependency tracking, reproducibility, and scalable DAG-based execution
+                    Integrated Gaussian copula–based synthetic data generation with K-NN sampling to construct augmented minibatches for contrastive loss training, 
+                    enabling representation learning under PU constraints and limited label availability
                 }
-                \projectitem{Spearheaded cross-team data acquisition across Organic/Paid/Offline media channels for MMM modeling}
-                \projectitem{Standardized marketing taxonomy and spend reconciliation with Finance teams for MMM modeling}
+                %https://medium.com/chat-gpt-now-writes-all-my-articles/copula-distribution-for-synthetic-data-sampling-c52749362dc0     
+                %https://arxiv.org/pdf/2203.17250
+                %https://towardsdatascience.com/how-to-generate-real-world-synthetic-data-with-ctgan-af41b4d60fde/       
                 \projectitem{
-                    Collaborated with BI team to build a journey-based analytics dashboard, leveraging MMM datassets, to provide marketers insights 
-                    about touchpoint effectiveness across the lead-to-deal funnel
+                    Boosted Akamai's new customer acquisition by building a propensity-to-buy model using LightGBM with PU learning weights, 
+                    uncovering \$8.7M in sales pipeline and driving \$6.8M in GMRR since 2023
                 }
-                \projectitem{
-                    Guided a junior data scientist in applying sequence clustering and process mining techniques to discover common marketing journey patterns, 
-                    helping Marketing design recipes for personalization
+                %\projectitem{
+                %        Led development of a white space analysis incorporating propensity-to-buy, intent-to-buy, and purchase
+                %        wallet size to improve cross-sell and upsell initiatives by Marketers \& Account Executives
+                %    }
                 }
-            }
+
+                \vspace{9pt}
+                \project{Key Project: Journey-based Marketing Mix Modeling (MMM) for Channel optimization}{}{
+                    % https://arxiv.org/pdf/2505.12617, https://docs.doubleml.org/stable/examples/py_double_ml_plm_irm_hetfx.html, https://developers.google.com/meridian/docs/basics/causal-graph
+                    \vspace{3pt}
+                    \projectitem{
+                        Implemented a novel MMM framework using Double Machine Learning (DML) to estimate causal-effects of different marketing channels 
+                        (concurrent multi-valued treatments), within B2B journey stages
+                    }
+                    \projectitem{Applied Principal Component Analysis (PCA) to handle cross-channel correlations, to generate uncorrelated shared marketing factors for causal estimation using DML}
+                    \projectitem{
+                        Utilized DML's partial linear model, a multi-output random forest regression model, 
+                        and an inverse PCA transform to estimate the causal effects of marketing channels with cross-channel interactions
+                    }
+                    \projectitem{
+                        Implemented modular, production-grade ETL pipelines using Hamilton to orchestrate feature transformations for MMM,
+                        enabling clear dependency tracking, reproducibility, and scalable DAG-based execution
+                    }
+                    %\projectitem{Spearheaded cross-team data acquisition across Organic/Paid/Offline media channels for MMM modeling}
+                    %\projectitem{Standardized marketing taxonomy and spend reconciliation with Finance teams for MMM modeling}
+                    %\projectitem{
+                    %    Collaborated with BI team to build a journey-based analytics dashboard, leveraging MMM datassets, to provide marketers insights 
+                    %    about touchpoint effectiveness across the lead-to-deal funnel
+                    %}
+                %\projectitem{
+                %    Guided a junior data scientist in applying sequence clustering and process mining techniques to discover common marketing journey patterns, 
+                %    helping Marketing design recipes for personalization
+                %}
+                }
         }
         
         \role{Senior Data Scientist}{2017-2022}{
-            \achievement{
-                Built a novel anomaly detection algorithm using isolation forest and ESD test to pro-actively monitor KPIs
-                for detecting high-level customer incidents caused by software rollouts
-            }
-            \achievement{
-                Diagnosed factors that affect video delivery over the internet (OTT) by observing patterns between Akamai’s network metrics using inferential statistics
-            }
-            \achievement{
-                Assembled large volumes of unstructured data in Spark to prototype an anomaly detection framework
-            }
-            \achievement{
-                Collaborated with a team of data scientists to construct a correlation engine based on graph theory to
-                identify root-causes of performance degradation within a network of servers
+            \project{Key Project: Multi-Stage Anomaly Detection \& Root Cause Analysis for Customer Incident Prediction}{}{
+                \vspace{3pt}
+                \projectitem{
+                    Developed a multi-staged anomaly detection system to proactively identify customer-impacting incidents 
+                    triggered by software rollouts across Akamai’s global network regions, based on sever and network telemetry data
+                }
+                \projectitem{
+                    %Designed an ANN pre-filter to flag anomalous time windows based on statistical features derived
+                    %from aggregate telemetry
+                    Used Locality Sensitive Hashing (LSH)-based ANN scoring on aggregated statistical features, to efficiently pre-filter anomalous time windows, 
+                    triggering downstream systems for more fine-grained detection
+                    % (mean, variance, cumulative mean, cumulative variance, kurtosis)
+                }
+                \projectitem{
+                    As part of the detection system, applied Isolation Forest on high-resolution metrics to identify point anomalies, 
+                    and an LSTM-based Autoencoder trained on normal behavior to detect temporal shifts across historical windows using reconstruction score
+                }
+                \projectitem{
+                    Built scalable PySpark pipelines to process unstructured telemetry data for end-to-end model training and deployment
+                }
+                \projectitem{
+                    Built a contextual anomaly detection engine, that used clique detection algorithms to trace root causes of performance 
+                    degradation issues, by modelling alert dependencies and correlated failure patterns as a contextual graph
+                }
             }
         }
         
         \role{Data Scientist}{2015-2017}{
-            \achievement{
-                Applied a Bayesian model to dynamically update sales-quota targets as a part of Akamai’s operating plan
+            \project{Key Project: Customer Wallet Estimation Framework for Sales Territory Optimization}{}{
+            \vspace{3pt}    
+            \projectitem{
+                   Trained Quantile Regression GBM models to estimate potential spend bands, enabling tiered wallet segmentation from small-company to enterprise; 
+                   achieving a 121\% lift in revenue correlation over traditional approach based on company's sales volume
+                }
+                \projectitem{
+                    Developed SparkR-based data pipelines for feature engineering, processing 12-month Akamai revenue, network traffic, and D\&B firmographics
+                    to support model training using Spark MLlib
+                }
+                \projectitem{
+                    Built a real-time scoring pipeline using Salesforce APIs to score accounts at creation, enabling instant sales and marketing \newline activation
+                    for account prioritization, share-of-wallet estimation, territory design, and upsell targeting
+                }
+                \projectitem{
+                    Deployed the wallet scoring engine as a systemd daemon on an on-prem server, meeting SOX compliance requirements,
+                    as well as created a PL/SQL package for in-database scoring of 300M non-customer companies to support paid search targetting
+                }
+            % \achievement{
+            %     Applied a Bayesian model to dynamically update sales-quota targets as a part of Akamai’s operating plan
+            % }
+            % \achievement{
+            %     Constructed a hierarchical mixed-effects Bayesian model to measure customer loyalty and NPS score
+            % }
+            % \achievement{
+            %     Automated reports derived from disparate datasets that measure adoption rates for internal website portal
+            % }
+            % \achievement{
+            %     Designed a graph database application to optimize storage mechanism of hierarchal firmographic data
+            % }
+            % \achievement{
+            %     Performed data forensics and detected gaps in invoicing systems, product configurations, and contractual
+            %     structures that led to the recovery of unaccounted revenue close to \$500K
+            % }
             }
-            \achievement{
-                Constructed a hierarchical mixed-effects Bayesian model to measure customer loyalty and NPS score
-            }
-            \achievement{
-                Automated reports derived from disparate datasets that measure adoption rates for internal website portal
-            }
-            \achievement{
-                Designed a graph database application to optimize storage mechanism of hierarchal firmographic data
-            }
-            \achievement{
-                Performed data forensics and detected gaps in invoicing systems, product configurations, and contractual
-                structures that led to the recovery of unaccounted revenue close to \$500K
-            }
-            % Write about Wallet Potential Model here along with points from code refactoriing
         }
     }
 %}
-
-
+\vspace{-8pt}
 % ----- Education -----
 \section{Education}
 %\sectiontwocol{Education}{
@@ -188,10 +241,13 @@ system users in a multi-modal environment,” Transportation Research Part B, 20
 % ----- Skills -----
 \section{Skills}
 \begin{itemize}
-    \item \textbf{Languages:} Python, R, SQL, JavaScript, TypeScript
-    \item \textbf{Tools:} Docker, Kubernetes, Git, Jenkins
-    \item \textbf{Databases:} MySQL, PostgreSQL, MongoDB
-    \item \textbf{Cloud Platforms:} AWS, Azure   
+    \item \textbf{Programming Languages:} Python, R, SQL
+    \item \textbf{Tools:} Git, MLflow, Tensorboard, Docker, Ansible, Jenkins CI/CD
+    \item \textbf{Databases:} Oracle, PostgreSQL, Neo4j, Memgraph
+    \item \textbf{Big Data:} Apache Spark, Hadoop, Ray
+    \item \textbf{Cloud Platforms:} Linode
 \end{itemize}
 
 \end{document}
+
+
